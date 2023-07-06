@@ -1,0 +1,180 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgba(101, 0, 94, 1) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.formDesc {
+  font-size: 2rem;
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+.title {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(107, 107, 107);
+}
+input {
+  border: 2px solid #dadada;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px;
+  box-shadow: 0 0 20px #9ecaed; /* blue shadow always with 20px blur-radius */
+  transition: box-shadow 0.3s ease-in-out; /* smooth transition for the glow */
+
+  /* Additional styles to enhance the appearance */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 20px #ffcc00; /* vibrant yellow shadow on focus with 20px blur-radius */
+  border-radius: 40px;
+
+  /* Additional styles to enhance the appearance */
+  background-color: #fff;
+  color: #333;
+}
+
+#todoData {
+  height: 4rem;
+  background-color: rgb(255, 248, 248);
+}
+body {
+  background-image: url("bg.jpg");
+}
+.form-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.deleteAllWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.btn.btn-primary,
+.deleteAll {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.todo-item {
+  font-size: 2rem;
+}
+.fa-trash {
+  background-color: rgb(235, 191, 191);
+  padding: 20px;
+  border-radius: 50%;
+}
+.fa-trash:hover {
+  cursor: pointer;
+}
+#listContainer {
+  margin-top: 2rem;
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
+}
+
+.todo-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: rgba(221, 201, 218, 0.514);
+  padding: 0.5rem 5rem;
+  border-radius: 5rem;
+}
+.checkbox:hover {
+  cursor: pointer;
+}
